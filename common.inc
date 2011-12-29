@@ -29,12 +29,14 @@ function __autoload($className) {
 		}
 	}
 	$s = "Missing class: $className.";
-	return eval("class $className{" .
+	$ss = "class $className{" .
 				' function __construct(){' .
 				"  _ERROR('$s');" .
 				"  throw new Exception('$s');" .
 				' }' .
-				'}');
+				'}';
+	_ERROR("autoload> ".$ss);
+	return eval($ss);
 }
 
 function Logger() {
