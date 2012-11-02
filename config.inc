@@ -11,6 +11,8 @@ if (!defined('_DEBUG_LEVEL_'))
 if (!defined('_LOG_UP_LEVEL_'))
 	  define('_LOG_UP_LEVEL_',PEAR_LOG_WARNING);  // EMERG|ALERT|CRIT|ERR|WARNING|NOTICE|INFO|DEBUG)
 
+if (!defined('BIN_PATH'))
+	  define('BIN_PATH','/www/bin/');
 if (!defined('CLASS_PATH'))
 	  define('CLASS_PATH','/www/classes/');
 if (!defined('DATA_PATH'))
